@@ -321,4 +321,4 @@ const a = Symbol(); // new를 붙이지 않는다.
 
 <br><br><br>
 
-출처 : 코딩앙마
+출처 : [코딩앙마 유튜브](https://youtu.be/4_WLS9Lj6n4)
