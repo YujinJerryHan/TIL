@@ -163,7 +163,7 @@ let [modal, setModal] = useState(false);
 
 **state에 무슨 자료를 넣어야 하지?**
 
-암거나 맘대로 하면 된다
+- 암거나 맘대로 하면 된다
 - `‘닫힘’ / ‘열림’`, `0/1`, `true/false`
 
 **JSX에서 조건문 쓰는 법 : 삼항연산자(ternary operator)**
@@ -215,4 +215,4 @@ JSX안에서는 if문을 바로 사용할 수 없다. 대신 삼항연산자를 
 
 결론 : 비슷한 html 반복생성하려면 map() 쓰면 됩니다
 
----
+<br><br>
