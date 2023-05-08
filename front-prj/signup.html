@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+<script>
+	function checkpw(){
+		var pw =document.getElementById('pw1').value;
+		var sc =["!","@","#","$","%"];
+		var checksc=0;
+		
+		if(pw.length<6||pw.length>16){
+			window.alert('비밀번호는 6글자 이상, 16글자 이하만 이용 가능합니다.');
+            document.getElementById('pw1').value='';
+        }
+        for(var i=0;i<sc.length;i++){
+            if(pw.indexOf(sc[i]) != -1){
+                checksc = 1;
+            }
+        }
+        if(checksc == 0){
+            window.alert('!,@,#,$,% 의 특수문자가 들어가 있지 않습니다.')
+            document.getElementById('pw1').value='';
+        }
+        if(document.getElementById('pw1').value !='' && document.getElementById('pw2').value!=''){
+            if(document.getElementById('pw1').value==document.getElementById('pw2').value){
+                document.getElementById('check').innerHTML='비밀번호가 일치합니다.'
+                document.getElementById('check').style.color='blue';
+            }
+            else{
+                document.getElementById('check').innerHTML='비밀번호가 일치하지 않습니다.';
+                document.getElementById('check').style.color='red';
+            }
+		}
+	}
+</script>
+</head>
+<body>
+	<div class="Signup page">
+		<form>
+			<h2>회원가입</h2>
+			<p>아이디</p>
+				<input type="text" name="id" placeholder="ID">
+			<P>비밀번호<p>
+				<input id="pw1" type="password" name="password" placeholder="비밀번호" onchange="checkpw()">
+			<P>비밀번호 확인<p>
+				<input id="pw2" type="password" name="password-confirm" placeholder="비밀번호 확인" onchange="checkpw()">
+				<span id="check"></span>
+			<p>닉네임</p>
+				<input type="text" name="nickname" placeholder="활동하실 닉네임을 알려주세요!">
+			<p>이름</p>
+				<input type="text" name="name" placeholder="이름">
+			<p>전화번호</p>
+				<input type="tel" name="tel" placeholder="휴대폰 번호">
+			<p>이메일<p>
+				<input type="email" name="email" placeholder="이메일"><br> 
+			<input type="submit" value="회원가입 완료"><br>
+		</form>
+	</div>
+</body>
+</html>
