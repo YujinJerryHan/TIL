@@ -1,0 +1,36 @@
+body {
+  display: grid;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 100px auto 50px;
+  grid-template-areas: 
+  'header header'
+  'main side'
+  'footer footer';
+}
+
+
+
+header {
+  background-color: black;
+  color: white;
+  grid-area: header;
+}
+
+main {
+  background-color: white;
+  grid-area: main;
+}
+
+aside {
+  background-color: yellow;
+  grid-area: side;
+}
+
+footer {
+  background-color: black;
+  color: whitesmoke;
+  grid-area: footer;
+}
